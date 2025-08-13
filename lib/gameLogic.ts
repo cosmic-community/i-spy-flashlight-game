@@ -74,6 +74,11 @@ export const GAME_LEVELS: GameLevel[] = [
 
 export function generateRandomObjects(level: number): GameObject[] {
   const levelConfig = GAME_LEVELS[Math.min(level - 1, GAME_LEVELS.length - 1)]
+  
+  if (!levelConfig) {
+    throw new Error(`Invalid level: ${level}`)
+  }
+  
   const objects: GameObject[] = []
   const usedPositions: Array<{x: number, y: number, size: number}> = []
 
@@ -83,6 +88,11 @@ export function generateRandomObjects(level: number): GameObject[] {
 
   for (let i = 0; i < selectedObjects.length; i++) {
     const objectData = selectedObjects[i]
+    
+    if (!objectData) {
+      continue
+    }
+    
     let attempts = 0
     let position = { x: 0, y: 0, size: 0 }
     let validPosition = false
@@ -124,7 +134,13 @@ export function generateRandomObjects(level: number): GameObject[] {
 export function selectRandomTarget(objects: GameObject[]): GameObject {
   const availableObjects = objects.filter(obj => !obj.found)
   const randomIndex = Math.floor(Math.random() * availableObjects.length)
-  return availableObjects[randomIndex]
+  const selectedObject = availableObjects[randomIndex]
+  
+  if (!selectedObject) {
+    throw new Error('No available objects to select')
+  }
+  
+  return selectedObject
 }
 
 export function checkObjectCollision(
@@ -165,7 +181,13 @@ export function formatTime(seconds: number): string {
 }
 
 export function getGameLevel(level: number): GameLevel {
-  return GAME_LEVELS[Math.min(level - 1, GAME_LEVELS.length - 1)]
+  const gameLevel = GAME_LEVELS[Math.min(level - 1, GAME_LEVELS.length - 1)]
+  
+  if (!gameLevel) {
+    throw new Error(`Invalid level: ${level}`)
+  }
+  
+  return gameLevel
 }
 
 export function getNextLevel(currentLevel: number): number {

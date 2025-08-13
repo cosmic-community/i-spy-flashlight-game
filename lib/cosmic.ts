@@ -38,7 +38,7 @@ export async function getHighScores() {
     const response = await cosmic.objects
       .find({ type: 'high-scores' })
       .props(['title', 'metadata'])
-      .sort({ 'metadata.score': -1 })
+      .sort('-metadata.score')
       .limit(10)
     
     return response.objects || []
