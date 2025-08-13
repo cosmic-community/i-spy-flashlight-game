@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-gray-900 text-white font-sans;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    cursor: none;
+  }
+
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  .flashlight-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .game-object {
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    font-size: 2rem;
+    z-index: 5;
+    transition: all 0.2s ease;
+  }
+
+  .game-object.found {
+    @apply animate-bounce-slow;
+    filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.8));
+  }
+
+  .confirmation-ring {
+    position: fixed;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 15;
+    transition: all 0.1s ease;
+  }
+
+  .confirmation-ring.active {
+    border-color: rgba(34, 197, 94, 0.8);
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+  }
+
+  .ui-panel {
+    @apply bg-gray-800 bg-opacity-90 backdrop-blur-sm rounded-lg p-4 border border-gray-700;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .game-button {
+    @apply px-6 py-3 rounded-lg font-semibold text-white transition-all duration-200;
+    @apply hover:scale-105 active:scale-95;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800;
+  }
+
+  .game-button.primary {
+    @apply bg-primary-600 hover:bg-primary-700 focus:ring-primary-500;
+  }
+
+  .game-button.success {
+    @apply bg-success-600 hover:bg-success-700 focus:ring-success-500;
+  }
+
+  .game-button.warning {
+    @apply bg-warning-600 hover:bg-warning-700 focus:ring-warning-500;
+  }
+
+  .game-button.danger {
+    @apply bg-danger-600 hover:bg-danger-700 focus:ring-danger-500;
+  }
+}
+
+@layer utilities {
+  .flashlight-effect {
+    mask-image: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                transparent var(--flashlight-size, 60px), 
+                rgba(0, 0, 0, 0.95) calc(var(--flashlight-size, 60px) + 20px));
+    -webkit-mask-image: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
+                        transparent var(--flashlight-size, 60px), 
+                        rgba(0, 0, 0, 0.95) calc(var(--flashlight-size, 60px) + 20px));
+  }
+
+  .progress-ring {
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 0.1s linear;
+  }
+
+  .progress-ring.active {
+    stroke-dashoffset: calc(283 - (283 * var(--progress, 0)));
+  }
+}
