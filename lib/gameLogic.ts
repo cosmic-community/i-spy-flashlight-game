@@ -1,7 +1,8 @@
 import { GameObject, GameLevel } from '../types'
 
-// Available game objects with emojis
+// Available game objects with emojis - expanded collection
 export const GAME_OBJECTS = [
+  // Fruits
   { name: 'Apple', emoji: '🍎' },
   { name: 'Banana', emoji: '🍌' },
   { name: 'Cherry', emoji: '🍒' },
@@ -10,12 +11,48 @@ export const GAME_OBJECTS = [
   { name: 'Strawberry', emoji: '🍓' },
   { name: 'Watermelon', emoji: '🍉' },
   { name: 'Pineapple', emoji: '🍍' },
+  { name: 'Peach', emoji: '🍑' },
+  { name: 'Pear', emoji: '🍐' },
+  { name: 'Kiwi', emoji: '🥝' },
+  { name: 'Mango', emoji: '🥭' },
+  { name: 'Coconut', emoji: '🥥' },
+  { name: 'Avocado', emoji: '🥑' },
+  { name: 'Lemon', emoji: '🍋' },
+  { name: 'Lime', emoji: '🍋‍🟩' },
+  { name: 'Blueberries', emoji: '🫐' },
+  
+  // Vegetables
+  { name: 'Tomato', emoji: '🍅' },
+  { name: 'Eggplant', emoji: '🍆' },
+  { name: 'Carrot', emoji: '🥕' },
+  { name: 'Corn', emoji: '🌽' },
+  { name: 'Broccoli', emoji: '🥦' },
+  { name: 'Pepper', emoji: '🌶️' },
+  { name: 'Cucumber', emoji: '🥒' },
+  { name: 'Lettuce', emoji: '🥬' },
+  { name: 'Onion', emoji: '🧅' },
+  { name: 'Garlic', emoji: '🧄' },
+  { name: 'Potato', emoji: '🥔' },
+  
+  // Vehicles
   { name: 'Car', emoji: '🚗' },
   { name: 'Bus', emoji: '🚌' },
   { name: 'Airplane', emoji: '✈️' },
   { name: 'Bicycle', emoji: '🚲' },
   { name: 'Train', emoji: '🚆' },
   { name: 'Boat', emoji: '⛵' },
+  { name: 'Truck', emoji: '🚚' },
+  { name: 'Taxi', emoji: '🚕' },
+  { name: 'Police Car', emoji: '🚓' },
+  { name: 'Fire Truck', emoji: '🚒' },
+  { name: 'Ambulance', emoji: '🚑' },
+  { name: 'Helicopter', emoji: '🚁' },
+  { name: 'Rocket', emoji: '🚀' },
+  { name: 'Motorcycle', emoji: '🏍️' },
+  { name: 'Scooter', emoji: '🛵' },
+  { name: 'Skateboard', emoji: '🛹' },
+  
+  // Animals
   { name: 'Cat', emoji: '🐱' },
   { name: 'Dog', emoji: '🐶' },
   { name: 'Bird', emoji: '🐦' },
@@ -24,6 +61,36 @@ export const GAME_OBJECTS = [
   { name: 'Bear', emoji: '🐻' },
   { name: 'Lion', emoji: '🦁' },
   { name: 'Tiger', emoji: '🐯' },
+  { name: 'Elephant', emoji: '🐘' },
+  { name: 'Monkey', emoji: '🐵' },
+  { name: 'Panda', emoji: '🐼' },
+  { name: 'Koala', emoji: '🐨' },
+  { name: 'Fox', emoji: '🦊' },
+  { name: 'Wolf', emoji: '🐺' },
+  { name: 'Pig', emoji: '🐷' },
+  { name: 'Cow', emoji: '🐮' },
+  { name: 'Horse', emoji: '🐴' },
+  { name: 'Sheep', emoji: '🐑' },
+  { name: 'Goat', emoji: '🐐' },
+  { name: 'Chicken', emoji: '🐔' },
+  { name: 'Duck', emoji: '🦆' },
+  { name: 'Penguin', emoji: '🐧' },
+  { name: 'Owl', emoji: '🦉' },
+  { name: 'Eagle', emoji: '🦅' },
+  { name: 'Butterfly', emoji: '🦋' },
+  { name: 'Bee', emoji: '🐝' },
+  { name: 'Ladybug', emoji: '🐞' },
+  { name: 'Spider', emoji: '🕷️' },
+  { name: 'Turtle', emoji: '🐢' },
+  { name: 'Snake', emoji: '🐍' },
+  { name: 'Frog', emoji: '🐸' },
+  { name: 'Octopus', emoji: '🐙' },
+  { name: 'Crab', emoji: '🦀' },
+  { name: 'Whale', emoji: '🐋' },
+  { name: 'Dolphin', emoji: '🐬' },
+  { name: 'Shark', emoji: '🦈' },
+  
+  // Objects & Items
   { name: 'Star', emoji: '⭐' },
   { name: 'Heart', emoji: '❤️' },
   { name: 'Diamond', emoji: '💎' },
@@ -35,6 +102,7 @@ export const GAME_OBJECTS = [
   { name: 'Hamburger', emoji: '🍔' },
   { name: 'Ice Cream', emoji: '🍦' },
   { name: 'Coffee', emoji: '☕' },
+  { name: 'Tea', emoji: '🍵' },
   { name: 'Book', emoji: '📚' },
   { name: 'Camera', emoji: '📷' },
   { name: 'Phone', emoji: '📱' },
@@ -48,6 +116,28 @@ export const GAME_OBJECTS = [
   { name: 'Shoe', emoji: '👠' },
   { name: 'Sock', emoji: '🧦' },
   { name: 'Glove', emoji: '🧤' },
+  { name: 'Ring', emoji: '💍' },
+  { name: 'Necklace', emoji: '📿' },
+  { name: 'Purse', emoji: '👛' },
+  { name: 'Backpack', emoji: '🎒' },
+  { name: 'Briefcase', emoji: '💼' },
+  
+  // Sports & Activities
+  { name: 'Soccer Ball', emoji: '⚽' },
+  { name: 'Basketball', emoji: '🏀' },
+  { name: 'Tennis Ball', emoji: '🎾' },
+  { name: 'Baseball', emoji: '⚾' },
+  { name: 'Football', emoji: '🏈' },
+  { name: 'Golf Ball', emoji: '⛳' },
+  { name: 'Bowling Ball', emoji: '🎳' },
+  { name: 'Trophy', emoji: '🏆' },
+  { name: 'Medal', emoji: '🥇' },
+  { name: 'Guitar', emoji: '🎸' },
+  { name: 'Piano', emoji: '🎹' },
+  { name: 'Microphone', emoji: '🎤' },
+  { name: 'Headphones', emoji: '🎧' },
+  
+  // Nature & Weather
   { name: 'Flower', emoji: '🌸' },
   { name: 'Tree', emoji: '🌳' },
   { name: 'Sun', emoji: '☀️' },
@@ -55,21 +145,122 @@ export const GAME_OBJECTS = [
   { name: 'Cloud', emoji: '☁️' },
   { name: 'Rainbow', emoji: '🌈' },
   { name: 'Lightning', emoji: '⚡' },
-  { name: 'Fire', emoji: '🔥' }
+  { name: 'Fire', emoji: '🔥' },
+  { name: 'Snowflake', emoji: '❄️' },
+  { name: 'Mountain', emoji: '⛰️' },
+  { name: 'Ocean', emoji: '🌊' },
+  { name: 'Cactus', emoji: '🌵' },
+  { name: 'Mushroom', emoji: '🍄' },
+  { name: 'Leaf', emoji: '🍃' },
+  { name: 'Rose', emoji: '🌹' },
+  { name: 'Sunflower', emoji: '🌻' },
+  { name: 'Tulip', emoji: '🌷' },
+  
+  // Food & Drinks
+  { name: 'Bread', emoji: '🍞' },
+  { name: 'Croissant', emoji: '🥐' },
+  { name: 'Pretzel', emoji: '🥨' },
+  { name: 'Pancakes', emoji: '🥞' },
+  { name: 'Waffle', emoji: '🧇' },
+  { name: 'Cheese', emoji: '🧀' },
+  { name: 'Egg', emoji: '🥚' },
+  { name: 'Bacon', emoji: '🥓' },
+  { name: 'Sausage', emoji: '🌭' },
+  { name: 'Popcorn', emoji: '🍿' },
+  { name: 'Candy', emoji: '🍬' },
+  { name: 'Chocolate', emoji: '🍫' },
+  { name: 'Cookie', emoji: '🍪' },
+  { name: 'Donut', emoji: '🍩' },
+  { name: 'Honey', emoji: '🍯' },
+  { name: 'Milk', emoji: '🥛' },
+  { name: 'Juice', emoji: '🧃' },
+  { name: 'Soda', emoji: '🥤' },
+  
+  // Tools & Objects
+  { name: 'Hammer', emoji: '🔨' },
+  { name: 'Wrench', emoji: '🔧' },
+  { name: 'Screwdriver', emoji: '🪛' },
+  { name: 'Saw', emoji: '🪚' },
+  { name: 'Drill', emoji: '🪃' },
+  { name: 'Paintbrush', emoji: '🖌️' },
+  { name: 'Pencil', emoji: '✏️' },
+  { name: 'Pen', emoji: '🖊️' },
+  { name: 'Ruler', emoji: '📏' },
+  { name: 'Calculator', emoji: '🧮' },
+  { name: 'Magnifying Glass', emoji: '🔍' },
+  { name: 'Flashlight', emoji: '🔦' },
+  { name: 'Candle', emoji: '🕯️' },
+  { name: 'Light Bulb', emoji: '💡' },
+  { name: 'Battery', emoji: '🔋' },
+  { name: 'Plug', emoji: '🔌' },
+  { name: 'Clock', emoji: '🕐' },
+  { name: 'Alarm Clock', emoji: '⏰' },
+  { name: 'Calendar', emoji: '📅' },
+  { name: 'Map', emoji: '🗺️' },
+  { name: 'Compass', emoji: '🧭' },
+  { name: 'Thermometer', emoji: '🌡️' },
+  
+  // Symbols & Shapes
+  { name: 'Circle', emoji: '⭕' },
+  { name: 'Cross', emoji: '✖️' },
+  { name: 'Checkmark', emoji: '✅' },
+  { name: 'Question Mark', emoji: '❓' },
+  { name: 'Exclamation', emoji: '❗' },
+  { name: 'Peace Sign', emoji: '☮️' },
+  { name: 'Yin Yang', emoji: '☯️' },
+  { name: 'Recycling', emoji: '♻️' },
+  { name: 'Warning', emoji: '⚠️' },
+  { name: 'Prohibited', emoji: '🚫' },
+  { name: 'Stop Sign', emoji: '🛑' },
+  { name: 'Arrow Up', emoji: '⬆️' },
+  { name: 'Arrow Down', emoji: '⬇️' },
+  { name: 'Arrow Left', emoji: '⬅️' },
+  { name: 'Arrow Right', emoji: '➡️' },
+  
+  // Miscellaneous
+  { name: 'Bomb', emoji: '💣' },
+  { name: 'Crystal Ball', emoji: '🔮' },
+  { name: 'Magic Wand', emoji: '🪄' },
+  { name: 'Dice', emoji: '🎲' },
+  { name: 'Puzzle Piece', emoji: '🧩' },
+  { name: 'Balloon Animals', emoji: '🎈' },
+  { name: 'Kite', emoji: '🪁' },
+  { name: 'Pinwheel', emoji: '🎡' },
+  { name: 'Ferris Wheel', emoji: '🎠' },
+  { name: 'Carousel Horse', emoji: '🎠' },
+  { name: 'Tent', emoji: '⛺' },
+  { name: 'Sleeping Bag', emoji: '🛏️' },
+  { name: 'Pillow', emoji: '🛏️' },
+  { name: 'Blanket', emoji: '🧸' },
+  { name: 'Teddy Bear', emoji: '🧸' },
+  { name: 'Toy Robot', emoji: '🤖' },
+  { name: 'Alien', emoji: '👽' },
+  { name: 'Ghost', emoji: '👻' },
+  { name: 'Skull', emoji: '💀' },
+  { name: 'Pumpkin', emoji: '🎃' },
+  { name: 'Christmas Tree', emoji: '🎄' },
+  { name: 'Santa Hat', emoji: '🎅' },
+  { name: 'Snowman', emoji: '⛄' },
+  { name: 'Easter Egg', emoji: '🥚' },
+  { name: 'Birthday Cake', emoji: '🎂' },
+  { name: 'Fireworks', emoji: '🎆' },
+  { name: 'Sparkler', emoji: '🎇' },
+  { name: 'Confetti', emoji: '🎊' },
+  { name: 'Party Hat', emoji: '🎉' },
 ]
 
-// Game level configurations
+// Game level configurations - quadrupled object counts
 export const GAME_LEVELS: GameLevel[] = [
-  { level: 1, timeLimit: 60, objectCount: 15, flashlightSize: 120, requiredConfirmationTime: 3000 },
-  { level: 2, timeLimit: 50, objectCount: 20, flashlightSize: 100, requiredConfirmationTime: 3000 },
-  { level: 3, timeLimit: 45, objectCount: 25, flashlightSize: 90, requiredConfirmationTime: 3000 },
-  { level: 4, timeLimit: 40, objectCount: 30, flashlightSize: 80, requiredConfirmationTime: 3000 },
-  { level: 5, timeLimit: 35, objectCount: 35, flashlightSize: 70, requiredConfirmationTime: 3000 },
-  { level: 6, timeLimit: 30, objectCount: 40, flashlightSize: 60, requiredConfirmationTime: 3500 },
-  { level: 7, timeLimit: 25, objectCount: 45, flashlightSize: 55, requiredConfirmationTime: 3500 },
-  { level: 8, timeLimit: 20, objectCount: 50, flashlightSize: 50, requiredConfirmationTime: 4000 },
-  { level: 9, timeLimit: 18, objectCount: 55, flashlightSize: 45, requiredConfirmationTime: 4000 },
-  { level: 10, timeLimit: 15, objectCount: 60, flashlightSize: 40, requiredConfirmationTime: 4500 }
+  { level: 1, timeLimit: 90, objectCount: 60, flashlightSize: 120, requiredConfirmationTime: 3000 },
+  { level: 2, timeLimit: 85, objectCount: 80, flashlightSize: 110, requiredConfirmationTime: 3000 },
+  { level: 3, timeLimit: 80, objectCount: 100, flashlightSize: 100, requiredConfirmationTime: 3000 },
+  { level: 4, timeLimit: 75, objectCount: 120, flashlightSize: 90, requiredConfirmationTime: 3000 },
+  { level: 5, timeLimit: 70, objectCount: 140, flashlightSize: 85, requiredConfirmationTime: 3000 },
+  { level: 6, timeLimit: 65, objectCount: 160, flashlightSize: 80, requiredConfirmationTime: 3500 },
+  { level: 7, timeLimit: 60, objectCount: 180, flashlightSize: 75, requiredConfirmationTime: 3500 },
+  { level: 8, timeLimit: 55, objectCount: 200, flashlightSize: 70, requiredConfirmationTime: 4000 },
+  { level: 9, timeLimit: 50, objectCount: 220, flashlightSize: 65, requiredConfirmationTime: 4000 },
+  { level: 10, timeLimit: 45, objectCount: 240, flashlightSize: 60, requiredConfirmationTime: 4500 }
 ]
 
 export function generateRandomObjects(level: number): GameObject[] {
@@ -98,21 +289,31 @@ export function generateRandomObjects(level: number): GameObject[] {
     let validPosition = false
 
     // Try to find a position that doesn't overlap with existing objects
-    while (!validPosition && attempts < 100) {
+    // Reduced minimum spacing for higher density
+    while (!validPosition && attempts < 200) {
       position = {
-        x: Math.random() * (window.innerWidth - 100) + 50,
-        y: Math.random() * (window.innerHeight - 100) + 50,
-        size: Math.random() * 20 + 30 // Size between 30-50px
+        x: Math.random() * (window.innerWidth - 80) + 40,
+        y: Math.random() * (window.innerHeight - 80) + 40,
+        size: Math.random() * 15 + 25 // Size between 25-40px (slightly smaller for higher density)
       }
 
       validPosition = !usedPositions.some(used => {
         const distance = Math.sqrt(
           Math.pow(position.x - used.x, 2) + Math.pow(position.y - used.y, 2)
         )
-        return distance < (position.size + used.size) * 1.5 // Add some padding
+        return distance < (position.size + used.size) * 1.2 // Reduced padding for higher density
       })
 
       attempts++
+    }
+
+    // If we can't find a non-overlapping position after many attempts, allow some overlap
+    if (!validPosition && attempts >= 200) {
+      position = {
+        x: Math.random() * (window.innerWidth - 80) + 40,
+        y: Math.random() * (window.innerHeight - 80) + 40,
+        size: Math.random() * 15 + 25
+      }
     }
 
     usedPositions.push(position)
