@@ -40,6 +40,20 @@ export default function GamePage() {
 
   const currentLevelConfig = getGameLevel(gameState.currentLevel)
 
+  // Apply/remove game-playing class to body based on game state
+  useEffect(() => {
+    if (gameState.isPlaying) {
+      document.body.classList.add('game-playing')
+    } else {
+      document.body.classList.remove('game-playing')
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('game-playing')
+    }
+  }, [gameState.isPlaying])
+
   // Initialize game
   const initializeGame = useCallback((level: number = 1) => {
     const objects = generateRandomObjects(level)
